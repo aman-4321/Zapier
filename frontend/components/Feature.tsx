@@ -31,7 +31,7 @@ function Check() {
     >
       <path
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
         d="m4.5 12.75 6 6 9-13.5"
       />
     </svg>

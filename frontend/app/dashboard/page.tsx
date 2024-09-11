@@ -66,7 +66,7 @@ export default function Dashboard() {
     <div>
       <Appbar />
       <div className="flex justify-center pt-8">
-        <div className="max-w-screen-lg	 w-full">
+        <div className="max-w-screen-lg w-full">
           <div className="flex justify-between pr-8 ">
             <div className="text-2xl font-bold">My Zaps</div>
             <DarkButton
@@ -83,8 +83,7 @@ export default function Dashboard() {
         "Loading..."
       ) : (
         <div className="flex justify-center">
-          {" "}
-          <ZapTable zaps={zaps} />{" "}
+          <ZapTable zaps={zaps} />
         </div>
       )}
     </div>
