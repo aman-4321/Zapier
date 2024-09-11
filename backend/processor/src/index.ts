@@ -8,7 +8,7 @@ const kafka = new Kafka({
   brokers: ["localhost:9092"],
 });
 
-async function main(): Promise<void> {
+async function main() {
   const producer = kafka.producer();
   await producer.connect();
 
@@ -28,7 +28,7 @@ async function main(): Promise<void> {
       }),
     });
 
-    await prismaClient.zapRunOutbox.delete({
+    await prismaClient.zapRunOutbox.deleteMany({
       where: {
         id: {
           in: pendingRows.map((x) => x.id),
