@@ -1,8 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { PrimaryButton } from "./buttons/PrimaryButton";
-import { GreenHeroVideo } from "./GreenVideo";
-import { Card } from "./Card";
+import { GreenHeroVideo } from "./Video";
+import CardGrid from "./Card";
 
 export const GreenPage: React.FC = () => {
   const router = useRouter();
@@ -44,33 +44,8 @@ export const GreenPage: React.FC = () => {
       <div className="text-black text-5xl font-semibold">
         Meet our automation products
       </div>
-      <div className="flex-row">
-        <Card
-          name="Zaps"
-          imageSrc="/zaps-v2_yos13r.avif"
-          description="Design forms, web pages, and basic apps to power your business-critical workflows—no coding required."
-          link="/"
-          linkname="Explore Zaps"
-        ></Card>
-
-        <Card
-          imageSrc="/interfaces-v2_saxap0.avif"
-          description="Make your tools work harder for you. Build automated workflows with triggers and actions across 7,000+ apps."
-          link="/"
-          linkname="Explore interfaces"
-        ></Card>
-        <Card
-          imageSrc="/tables-v2_sb5vgu.avif"
-          description="Store, edit, and move data with a database that’s purpose-built for automation."
-          link="/"
-          linkname="Explore Tables"
-        ></Card>
-        <Card
-          imageSrc="/zaps-v2_yos13r.avif"
-          description="Build and automate customer conversations in minutes. Create custom AI chatbots that answer questions, resolve issues, and nurture leads."
-          link="/"
-          linkname="Explore Chatbots"
-        ></Card>
+      <div>
+        <CardGrid></CardGrid>
       </div>
     </div>
   );

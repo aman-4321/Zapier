@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import { userRouter } from "./router/user";
 import { zapRouter } from "./router/zap";
+import { actionRouter } from "./router/action";
+import { triggerRouter } from "./router/trigger";
 
 const app = express();
 

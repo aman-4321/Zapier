@@ -11,7 +11,7 @@ interface CardProps {
   name: string;
 }
 
-export const Card: React.FC<CardProps> = ({
+const Card: React.FC<CardProps> = ({
   imageSrc,
   description,
   link,
@@ -22,20 +22,20 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-white ${className}`}
+      className={`bg-white border border-gray-200 rounded-lg shadow dark:bg-white ${className}`}
     >
       <a href={link}>
         <Image
-          className="rounded-t-lg"
+          className="rounded-t-lg w-full h-96 object-fill"
           src={imageSrc}
           alt={description}
-          width={500}
-          height={300}
+          width={900}
+          height={400}
         />
       </a>
       <div className="p-5">
         <a href={link}>
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black">
             {children}
           </h5>
         </a>
@@ -47,7 +47,7 @@ export const Card: React.FC<CardProps> = ({
         </p>
         <a
           href={link}
-          className="inline-flex items-center px-1 py-2 text-l font-medium text-black underline hover:underline dark:bg-white"
+          className="inline-flex items-center px-1 py-2 text-l font-semibold text-black underline hover:underline dark:text-black"
         >
           {linkname}
           <svg
@@ -56,7 +56,7 @@ export const Card: React.FC<CardProps> = ({
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-4 h-4 ml-2"
+            className="w-4 h-4 ml-1"
           >
             <path
               strokeLinecap="round"
@@ -69,3 +69,40 @@ export const Card: React.FC<CardProps> = ({
     </div>
   );
 };
+
+export default function CardGrid() {
+  return (
+    <div className="container mx-auto px-32 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Card
+          name="Zaps"
+          imageSrc="/zaps-v2_yos13r.avif"
+          description="Design forms, web pages, and basic apps to power your business-critical workflows—no coding required."
+          link="/"
+          linkname="Explore Zaps"
+        />
+        <Card
+          name="Interfaces"
+          imageSrc="/interfaces-v2_saxap0.avif"
+          description="Make your tools work harder for you. Build automated workflows with triggers and actions across 7,000+ apps."
+          link="/"
+          linkname="Explore Interfaces"
+        />
+        <Card
+          name="Tables"
+          imageSrc="/tables-v2_sb5vgu.avif"
+          description="Store, edit, and move data with a database that's purpose-built for automation."
+          link="/"
+          linkname="Explore Tables"
+        />
+        <Card
+          name="Chatbots"
+          imageSrc="/zaps-v2_yos13r.avif"
+          description="Build and automate customer conversations in minutes. Create custom AI chatbots that answer questions, resolve issues, and nurture leads."
+          link="/"
+          linkname="Explore Chatbots"
+        />
+      </div>
+    </div>
+  );
+}

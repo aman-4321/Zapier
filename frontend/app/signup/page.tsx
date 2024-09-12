@@ -40,7 +40,7 @@ export default function Signup() {
             </div>
           </div>
 
-          <div className="flex-1 pt-6 pb-6 mt-12 px-4 border rounded max-h-[22rem] mr-[30rem]">
+          <div className="flex-1 pt-6 pb-6 mt-2 px-4 border rounded max-h-[26rem] mr-[30rem]">
             <Input
               label={"Name"}
               onChange={(e) => {

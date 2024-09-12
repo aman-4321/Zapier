@@ -28,4 +28,4 @@ app.post("/hooks/catch/:userId/:zapId", async (req: Request, res: Response) => {
   });
 });
 
-app.listen(3000);
+app.listen(3002);

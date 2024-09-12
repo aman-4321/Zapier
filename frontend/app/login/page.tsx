@@ -32,7 +32,7 @@ export default function Login() {
               <CheckFeature label={"14-day trial of premium features & apps"} />
             </div>
           </div>
-          <div className="flex-1 pt-6 pb-6 mt-12 px-4 border rounded max-h-80">
+          <div className="flex-1 pt-6 pb-6 mt-12 px-4 border rounded max-h-80 text-black">
             <Input
               onChange={(e) => {
                 setEmail(e.target.value);

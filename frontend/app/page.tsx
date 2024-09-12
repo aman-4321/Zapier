@@ -5,7 +5,7 @@ import { HeroVideo } from "@/components/HeroVideo";
 
 export default function Home() {
   return (
-    <main className="pb-48 bg-white">
+    <main className="pb-30 bg-white">
       <Appbar />
       <Hero />
       <div className="pt-8">
