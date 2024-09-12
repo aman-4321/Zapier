@@ -8,6 +8,7 @@ export const HeroVideo = () => {
           controls={false}
           muted
           autoPlay
+          loop
         />
       </div>
       <div className="text-black flex justify-center pt-16">
