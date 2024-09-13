@@ -4,15 +4,17 @@ export const DarkButton = ({
   children,
   onClick,
   size = "small",
+  className = "",
 }: {
   children: ReactNode;
   onClick: () => void;
   size?: "big" | "small";
+  className: string;
 }) => {
   return (
     <div
       onClick={onClick}
-      className={`flex flex-col justify-center px-8 py-2 cursor-pointer hover:shadow-md bg-purple-800 text-white rounded text-center`}
+      className={`flex flex-col justify-center px-8 py-2 cursor-pointer hover:shadow-md bg-purple-800 text-white rounded text-center ${className}`}
     >
       {children}
     </div>

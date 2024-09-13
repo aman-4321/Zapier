@@ -1,5 +1,4 @@
 "use client";
-import { Appbar } from "@/components/Appbar";
 import { DarkButton } from "@/components/buttons/DarkButton";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -7,6 +6,7 @@ import { BACKEND_URL, HOOKS_URL } from "../config";
 import { LinkButton } from "@/components/buttons/LinkButton";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { DashboardAppbar } from "@/components/dashboardAppbar";
 
 interface Zap {
   id: string;
@@ -64,12 +64,15 @@ export default function Dashboard() {
 
   return (
     <div>
-      <Appbar />
-      <div className="flex justify-center pt-8">
+      <DashboardAppbar></DashboardAppbar>
+      <div className="flex justify-center pt-8 bg-white min-h-screen">
         <div className="max-w-screen-lg w-full">
           <div className="flex justify-between pr-8 ">
-            <div className="text-2xl font-bold">My Zaps</div>
+            <div className="text-2xl font-bold text-black w-30 h-10">
+              My Zaps
+            </div>
             <DarkButton
+              className="w-30 h-10"
               onClick={() => {
                 router.push("/zap/create");
               }}
